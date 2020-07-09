@@ -1,17 +1,17 @@
-const notekey = Symbol('key');
-const notetitle = Symbol('title');
-const notebody = Symbol('body');
+const _note_key = Symbol('key');
+const _note_title = Symbol('title');
+const _note_body = Symbol('body');
 
-module.exprorts = class Note {
+module.exports = class Note {
      constructor(key, title, body) {
-          this[notekey] = key;
-          this[notetitle] = title;
-          this[notebody] = body;
+          this[_note_key] = key;
+          this[_note_title] = title;
+          this[_note_body] = body;
      }
 
-     get key() { return this[notekey]; }
-     get title() { return this[notetitle]; }
-     set title(newTitle) { this[notetitle] = newTitle; }
-     get body() { return this[notebody]; }
-     set body(newBody) { this[notebody] = newBody; }
+     get key() { return this[_note_key]; }
+     get title() { return this[_note_title]; }
+     set title(newTitle) { this[_note_title] = newTitle; }
+     get body() { return this[_note_body]; }
+     set body(newBody) { this[_note_body] = newBody; }
 };
